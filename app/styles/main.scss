@@ -276,7 +276,6 @@ body {
   input {
     border: none;
     font-size: inherit;
-    // padding: 0.1;
     font-size: 1.1rem;
   }
 
@@ -361,4 +360,9 @@ input[type="submit"] {
     font-size: 1.5em;
     font-weight: bold;
   }
+}
+
+#log {
+  text-align: center;
+  padding-top: 1rem;
 }
