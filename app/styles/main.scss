@@ -217,29 +217,19 @@ body {
   z-index: 99;
 }
 
-.checkout-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 2rem;
-}
-
 // New SCSS
 
 @import "config";
 @import "utils";
 
-.form-container {
+.container {
+  padding: 2rem 10rem;
   display: grid;
-  grid-template-columns: 1fr;
-
-  form {
-    padding: 1rem;
-    padding-left: 3rem;
-  }
 
   p {
     color: black;
     font-weight: bold;
+    margin-left: -3rem;
   }
 
   span {
@@ -252,6 +242,25 @@ body {
     text-align: center;
     margin-right: 1rem;
   }
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 1rem;
+  }
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
+
+  @media (max-width: $layout-breakpoint-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
 
   label {
     color: rgb(77, 77, 77);
@@ -280,9 +289,10 @@ body {
   }
 }
 
-.personal-info,
-.payment-info {
-  padding-left: 2rem;
+@media (max-width: $layout-breakpoint-small) {
+  .form-container {
+    order: 2;
+  }
 }
 
 .two-inputs {
@@ -318,7 +328,39 @@ input[type="submit"] {
 .order-container {
   background-color: $white-color;
   height: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 3rem 0rem;
 }
 
 .order {
+  border: rgb(224, 224, 224);
+  border-style: dotted;
+  padding: 1rem;
+  p {
+    margin: 0rem;
+  }
+}
+
+.item-holder {
+  padding: 1rem 0rem;
+  border: rgb(224, 224, 224);
+  border-bottom-style: dotted;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-weight: normal;
+  }
+}
+
+.total {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  p:last-child {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 }
