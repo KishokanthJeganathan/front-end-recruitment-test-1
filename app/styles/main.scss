@@ -223,6 +223,11 @@ body {
 @import "config";
 @import "utils";
 
+.d-none {
+  display: none;
+  background-color: pink;
+}
+
 .checkout-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -231,7 +236,7 @@ body {
   display: grid;
 
   p {
-    color: black;
+    color: $black-color;
     font-weight: bold;
     margin-left: -3rem;
   }
@@ -261,7 +266,7 @@ body {
   grid-template-columns: 1fr;
 
   label {
-    color: rgb(77, 77, 77);
+    color: $lightGray-color;
     display: flex;
     flex-direction: column;
     background-color: $white-color;
@@ -300,7 +305,7 @@ body {
 
 .submit-btn {
   margin-top: 2rem;
-  background-color: #6bd437;
+  background-color: $green-color;
   width: 100%;
   padding: 1rem;
   font-weight: bold;
@@ -309,8 +314,15 @@ body {
   border-radius: 0.3rem;
 
   &:hover {
-    background-color: #57b827;
+    background-color: $green-color;
   }
+}
+
+#creditCardNumber {
+  background-image: url("https://www.seekpng.com/png/detail/177-1778800_png-1000323-transparent-background-vector-pdf-3-visa.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .fa-lock {
@@ -331,7 +343,7 @@ input[type="submit"] {
 }
 
 .order {
-  border: rgb(224, 224, 224);
+  border: $lightestGray-color;
   border-style: dotted;
   padding: 1rem;
   p {
@@ -341,7 +353,7 @@ input[type="submit"] {
 
 .item-holder {
   padding: 1rem 0rem;
-  border: rgb(224, 224, 224);
+  border: $lightestGray-color;
   border-bottom-style: dotted;
 }
 
