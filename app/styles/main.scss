@@ -226,6 +226,7 @@ body {
 // New SCSS
 
 @import "config";
+@import "utils";
 
 .form-container {
   display: grid;
@@ -262,17 +263,26 @@ body {
     font-size: 1rem;
     font-weight: bold;
     border-radius: 0.3rem;
-    box-shadow: 0px 3px 0px 0px $lightGray-color;
-    -webkit-box-shadow: 0px 3px 0px 0px $lightGray-color;
-    -moz-box-shadow: 0px 3px 0px 0px $lightGray-color;
+    @extend %shadow;
   }
 
   input {
     border: none;
     font-size: inherit;
-    padding: 1;
+    // padding: 0.1;
     font-size: 1.1rem;
   }
+
+  select {
+    border: none;
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.personal-info,
+.payment-info {
+  padding-left: 2rem;
 }
 
 .two-inputs {
@@ -289,8 +299,18 @@ body {
   font-weight: bold;
   color: white;
   transition: background-color 0.3s;
+  border-radius: 0.3rem;
 
   &:hover {
     background-color: #57b827;
   }
+}
+
+.fa-lock {
+  margin-left: 2rem;
+}
+
+input[type="submit"] {
+  font-family: "Font Awesome 5 Free"; // for the open access versionf
+  font-weight: 900;
 }
