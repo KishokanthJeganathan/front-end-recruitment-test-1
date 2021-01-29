@@ -222,7 +222,10 @@ body {
 @import "config";
 @import "utils";
 
-.container {
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
   padding: 2rem 10rem;
   display: grid;
 
@@ -244,17 +247,8 @@ body {
   }
 
   @media (max-width: $layout-breakpoint-tablet) {
-    padding: 1rem;
-  }
-}
-
-.checkout-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 2rem;
-
-  @media (max-width: $layout-breakpoint-tablet) {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }
 
@@ -321,7 +315,7 @@ body {
 }
 
 input[type="submit"] {
-  font-family: "Font Awesome 5 Free"; // for the open access versionf
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
